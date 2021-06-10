@@ -8,28 +8,34 @@ function autoPlay(){
         tempIdx = 0
     }
     goToNImage(tempIdx)
-    setTimeout(autoPlay, 5000)
+    setTimeout(autoPlay, 7000)
 }
 
 function goToNImage(idx){
-    var imgWidth = document
-    .getElementsByClassName("carousel-content")[idx]
-        .getBoundingClientRect()["width"]
-
-    var currPos = currIdx * -imgWidth
     if(idx == currIdx){
         console.log(currPos, currIdx, idx)
         return
     }
 
-    console.log(currPos)
+
+    var imgWidth = document
+    .getElementsByClassName("carousel-content")[idx]
+        .getBoundingClientRect()["width"]
+
+    var currPos = currIdx * -imgWidth
+
+    var circles = document.getElementsByClassName("circle")
+    circles[currIdx].classList.remove("active")
+
     if(idx < currIdx){
         currPos += imgWidth * (currIdx - idx)
     }
     else if(idx > currIdx){
         currPos -= imgWidth * (idx - currIdx)
     }
-    console.log(currPos, currIdx, idx)
+
+    circles[idx].classList.add("active")
+
     currIdx = idx
     update(currPos)
 }
@@ -40,4 +46,9 @@ function update(currMargin){
     prevImg.animate({"margin-left": currMargin})
 }
 
-setTimeout(autoPlay, 5000)
+function prepare(){
+    document.getElementsByClassName("circle")[0].classList.add("active")
+    setTimeout(autoPlay, 7000)
+}
+
+prepare()

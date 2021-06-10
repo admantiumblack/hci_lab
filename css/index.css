@@ -76,12 +76,12 @@ footer{
 }
 
 .carousel-content{
-    min-height: 100%;
     min-width: 100%;
 }
 
 .carousel-img{
     min-width: 100%;
+    width: 100%;
 }
 
 .carousel-index{
