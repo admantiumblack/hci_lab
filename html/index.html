@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
 </head>
 <body>
     <nav>
@@ -14,17 +16,17 @@
             </a>
         </div>
         <div class="menu-item-placeholder">
-            <a href="">menu</a>
-            <a href="">about us</a>
-            <a href="">reserve</a>
+            <a href="../html/menu.html">menu</a>
+            <a href="../html/about_us.html">about us</a>
+            <a href="../html/reserve.html">reserve</a>
         </div>
     </nav>
-    <div id="content">
+    <div id="banner">
         <div class="carousel-wrapper">
                 <div class="carousel">
                     <div class="carousel-content"><img class="carousel-img" src="../assets/carousel_1.jpg" alt=""></div>
-                    <div class="carousel-content"><img class="carousel-img" src="../assets/grilled_steak_card.jpg" alt=""></div>
-                    <div class="carousel-content"><img class="carousel-img" src="../assets/wine_card.jpg" alt=""></div>
+                    <div class="carousel-content"><img class="carousel-img" src="../assets/carousel_2.jpg" alt=""></div>
+                    <div class="carousel-content"><img class="carousel-img" src="../assets/carousel_3.jpg" alt=""></div>
                     <div class="carousel-index">
                         <span class="circle" onmouseover="goToNImage(0)"></span>
                         <span class="circle" onmouseover="goToNImage(1)"></span>
@@ -32,16 +34,55 @@
                     </div>
             </div>
         </div>
+    </div>
 
-        <div id="card-wrapper">
-            <div class="card"><img src="" alt=""></div>
-            <div class="card"><img src="" alt=""></div>
-            <div class="card"><img src="" alt=""></div>
-            <div class="card"><img src="" alt=""></div>
+    <div id="content">
+        <div class="overlay"></div>
+        <div class="content-item" onclick="overview(0)">
+            <img src="../assets/steak_content.jpg" alt="" class="content-img">
+            <p class="content-title">TASTE OUR FINEST SELECTION</p>
+            <p class="content-text">
+                select your steak from our finest selection <br>
+                from australian black angus to our japanese A5 wagyu <br>
+                taste our freshly cut steak and carefully curated dry age
+            </p>
+        </div>
+        <div class="content-item" onclick="overview(1)">
+            <img src="../assets/wine_content.jpg" alt="" class="content-img">
+            <p class="content-title">SAMPLE OUR WINE SELECTION</p>
+            <p class="content-text">
+                select from our finest selection of wine <br>
+                choose from hundreds of our wine selection <br>
+            </p>
+        </div>
+        <div class="content-item" onclick="overview(2)">
+            <img src="../assets/restaurant_interior_content.jpg" alt="" class="content-img">
+            <p class="content-title">FANCY INTERIOR</p>
+            <p class="content-text">
+                enjoy your meal in our restaurant <br>
+                brought to you by the best interior designer in the world <br>
+            </p>
+        </div>
+        <div class="content-item" onclick="overview(3)">
+            <img src="../assets/service_content.jpg" alt="" class="content-img">
+            <p class="content-title">YOUR ENJOYMENT ARE OUR PRIORITY</p>
+            <p class="content-text">
+                enjoy our first class service <br>
+                you relax while we do all <br>
+                your enjoyment is our PRIORITY
+            </p>
         </div>
     </div>
-    <footer>
 
+    <footer>
+        <img src="../assets/logo.png" alt="" class = "logo-img">
+        <div class="footer-address">
+            <p class="address">
+                kemanggisan, Jakarta barat <br>
+                Jl. Syahdan <br>
+                08982378723613
+            </p>
+        </div>
     </footer>
     <script src="../lib/jquery.js"></script>
     <script src="../js/index.js"></script>

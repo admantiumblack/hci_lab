@@ -51,4 +51,28 @@ function prepare(){
     setTimeout(autoPlay, 7000)
 }
 
+function overview(n){
+    var cont = document.getElementsByClassName("content-item")[n]
+    var overlay = document.getElementsByClassName("overlay")[0]
+    var contTxt = document.getElementsByClassName("content-text")[n]
+    var contTitle = document.getElementsByClassName("content-title")[n]
+    var contImg = document.getElementsByClassName("content-img")[n]
+    console.log("overview enter")
+    if(!cont.classList.contains("clicked")){
+        cont.classList.add("clicked")
+        overlay.classList.add("overlay-active")
+        contTxt.classList.add("content-text-active")
+        contTitle.classList.add("content-title-active")
+        contImg.classList.add("content-img-active")
+    }
+    else{
+        cont.classList.remove("clicked")
+        overlay.classList.remove("overlay-active")
+        contTxt.classList.remove("content-text-active")
+        contTitle.classList.remove("content-title-active")
+        contImg.classList.remove("content-img-active")
+    }
+}
+
+
 prepare()
