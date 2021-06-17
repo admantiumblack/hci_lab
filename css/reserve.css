@@ -45,6 +45,11 @@ input:focus{
     width: 50%;
 }
 
+.input{
+    display: flex;
+    justify-content: center;
+}
+
 #error-message{
     color: red;
     font-size: 2vmin;
