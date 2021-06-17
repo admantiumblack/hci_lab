@@ -17,51 +17,51 @@ section{
     background-size: 55%;
     background-color: #fdfdfd;
     overflow: hidden;
-    padding: 100px 0;
+    padding: 19vh 0vh;
 }
 .inner-container{
     width: 55%;
     float: right;
     background-color: #fdfdfd;
-    padding: 150px;
+    padding: 10vh;
 }
 .inner-container h1{
-    margin-bottom: 30px;
-    font-size: 30px;
+    margin-bottom: 4vh;
+    font-size: 5vh;
     font-weight: 900;
 }
 .text{
-    font-size: 13px;
+    font-size: 2vh;
     color: #545454;
-    line-height: 30px;
+    line-height: 3vh;
     text-align: justify;
-    margin-bottom: 40px;
+    margin-bottom: 2.083vh;
 }
 .about{
     display: flex;
     justify-content: space-between;
     font-weight: 700;
-    font-size: 13px;
+    font-size: 2vh;
 }
-@media screen and (max-width:1200px){
+@media screen and (max-width:62.5vh){
     .inner-container{
-        padding: 80px;
+        padding: 4.16vh;
     }
 }
-@media screen and (max-width:1000px){
+@media screen and (max-width:50vh){
     .about-section{
         background-size: 100%;
-        padding: 100px 40px;
+        padding: 5vh 2vh;
     }
     .inner-container{
-        width: 100%;
+        width: 100%
     }
 }
-@media screen and (max-width:600px){
+@media screen and (max-width:31.25vh){
     .about-section{
-        padding: 0;
+        padding: 0vh;
     }
     .inner-container{
-        padding: 60px;
+        padding: 3vh;
     }
 }
