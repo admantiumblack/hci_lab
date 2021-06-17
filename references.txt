@@ -12,7 +12,4 @@ https://unsplash.com/photos/CPMZguYURMw
 https://www.pexels.com/photo/interior-of-a-classic-restaurant-2504911/
 
 Bawana:
-https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns
-https://www.w3schools.com/howto/howto_css_transition_hover.asp
-https://codeconvey.com/how-to-make-an-image-zoom-in-html/#:~:text=The%20CSS%20Style%20for%20Zoom&text=To%20zoom%20the%20image%20within,will%20use%20the%20transition%20property.
-
+https://iconarchive.com/show/oxygen-icons-by-oxygen-icons.org/Status-dialog-warning-icon.html
