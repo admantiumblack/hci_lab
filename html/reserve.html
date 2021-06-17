@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reservation</title>
+    <link rel="stylesheet" href="../css/promo.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/reserve.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo-img-placeholder">
+            <a href="./index.html">
+                <img src="../assets/logo.png" alt="logo" class="logo-img">
+            </a>
+        </div>
+        <div class="menu-item-placeholder">
+            <a href="../html/menu.html">menu</a>
+            <a href="../html/about_us.html">about us</a>
+            <a href="../html/reserve.html">reserve</a>
+        </div>
+    </nav>
+    <section>
+        <div class="containar">
+            <header>
+                <h1>Book Your Table</h1>
+            </header>
+            <div class="newctn">
+                <div class="newctn1">
+                    <img src="../assets/Reserve.png" alt="Reserve" class="imgs">
+                </div>
+                <div class="newctn2">
+                    <form onsubmit="validateForm()">
+                        <div class="component">
+                            <div class="desc">
+                                <label for="Name"><b>Name : </b></label>
+                            </div>
+                            <div class="input">
+                                <input type="text" placeholder="Name" name="Name" required>
+                            </div>
+                        </div>
+                        <div class="component">
+                            <div class="desc">
+                                <label for="phoneNum"><b>Phone Number : </b></label>
+                            </div>
+                            <div class="input">
+                                <input type="text" placeholder="Enter Phone Number" name="Phone Number" required>
+                            </div>
+                        </div>
+                        <div class="component">
+                            <div class="desc">
+                                <label for="numberofperson"><b>Number of person : </b></label>
+                            </div>
+                            <div class="input">
+                                <select name="number" id="number">
+                                    <option value="default" selected="selected">Number...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value=">4">>4</option>
+                                </select>
+                            </div>
+                        </div>
+                            <div>
+                                Date :
+                            </div>
+                            <input type="date" id ="dob">
+                            <div class="component">
+                                <div class="desc">
+                                    <label for="time"><b>Time : </b></label>
+                                </div>
+                                <div class="input">
+                                    <input type="time" placeholder="Enter Time" name="time" required>
+                                </div>
+                            </div>
+                            <div class="component">
+                                <div class="desc">
+                                    <label for="Coupon Code"><b>Coupon Code : </b></label>
+                                </div>
+                                <div class="input">
+                                    <input type="Coupon Code" placeholder="Coupon code" name="Coupon">
+                                </div>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="" id=""> Agree to our terms and condition
+                            </div>
+                            <div class="component">
+                                <!-- <button type="submit" onclick="validateForm()">Submit</button> -->
+                                <input type="submit" value="submit">
+                            </div>
+                    </form>
+                </div>
+                <div class="newctn3">
+                    <img src="../assets/Reserve2.jpg" alt="Reserve2" class="imgs">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <img src="../assets/logo.png" alt="" class = "logo-img">
+        <div class="footer-address">
+            <p class="address">
+                kemanggisan, Jakarta barat <br>
+                Jl. Syahdan <br>
+                08982378723613
+            </p>
+        </div>
+    </footer>
+    <script src="../js/reserve.js"></script>
+</body>
+
+</html>
