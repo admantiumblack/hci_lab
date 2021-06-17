@@ -21,27 +21,23 @@
         </div>
         <div class="menu-item-placeholder">
             <a href="../html/menu.html">menu</a>
+            <a href="../html/promo.html">promo</a>
             <a href="../html/about_us.html">about us</a>
             <a href="../html/reserve.html">reserve</a>
         </div>
     </nav>
+
     <section>
         <div class="containar">
-            <header>
-                <h1>Book Your Table</h1>
-            </header>
-            <div class="newctn">
-                <div class="newctn1">
-                    <img src="../assets/Reserve.png" alt="Reserve" class="imgs">
-                </div>
-                <div class="newctn2">
-                    <form onsubmit="validateForm()">
+            <div class="content-placeholder">
+                <div class="content">
+                    <form onsubmit="return validateForm()">
                         <div class="component">
                             <div class="desc">
                                 <label for="Name"><b>Name : </b></label>
                             </div>
                             <div class="input">
-                                <input type="text" placeholder="Name" name="Name" required>
+                                <input type="text" placeholder="Name" name="Name" id="name">
                             </div>
                         </div>
                         <div class="component">
@@ -49,7 +45,8 @@
                                 <label for="phoneNum"><b>Phone Number : </b></label>
                             </div>
                             <div class="input">
-                                <input type="text" placeholder="Enter Phone Number" name="Phone Number" required>
+                                <input type="text" placeholder="Enter Phone Number" 
+                                name="Phone Number" id="phone">
                             </div>
                         </div>
                         <div class="component">
@@ -57,26 +54,22 @@
                                 <label for="numberofperson"><b>Number of person : </b></label>
                             </div>
                             <div class="input">
-                                <select name="number" id="number">
-                                    <option value="default" selected="selected">Number...</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value=">4">>4</option>
+                                    <input type="text" name="number of person" 
+                                    id="numOfPerson" placeholder="enter number of reservation">
                                 </select>
                             </div>
                         </div>
                             <div>
                                 Date :
                             </div>
-                            <input type="date" id ="dob">
+                            <input type="date" id ="dateOfReservation">
                             <div class="component">
                                 <div class="desc">
                                     <label for="time"><b>Time : </b></label>
                                 </div>
                                 <div class="input">
-                                    <input type="time" placeholder="Enter Time" name="time" required>
+                                    <input type="time" placeholder="Enter Time" name="time" 
+                                    id="reservationTime">
                                 </div>
                             </div>
                             <div class="component">
@@ -84,20 +77,19 @@
                                     <label for="Coupon Code"><b>Coupon Code : </b></label>
                                 </div>
                                 <div class="input">
-                                    <input type="Coupon Code" placeholder="Coupon code" name="Coupon">
+                                    <input type="Coupon Code" placeholder="Coupon code" 
+                                    name="Coupon" id="coupon">
                                 </div>
                             </div>
-                            <div>
-                                <input type="checkbox" name="" id=""> Agree to our terms and condition
-                            </div>
                             <div class="component">
-                                <!-- <button type="submit" onclick="validateForm()">Submit</button> -->
-                                <input type="submit" value="submit">
+                                <input type="checkbox" name="" id="terms"> Agree to our terms and condition
+                            </div>
+                            <div id="error-message"></div>
+                            <div class="component">
+                                <input type="submit" value="submit" id="submit">
+                                <!-- <button type="submit" id="submit">submit</button> -->
                             </div>
                     </form>
-                </div>
-                <div class="newctn3">
-                    <img src="../assets/Reserve2.jpg" alt="Reserve2" class="imgs">
                 </div>
             </div>
         </div>

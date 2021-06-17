@@ -1,55 +1,99 @@
 var name;
 var phonenum;
 var numofperson;
-var reservationTime;
+var reservationDate;
 var time;
 var couponcode;
 
-function validate1() {
-    var x = document.forms["myForm"]["fname"].value;
-    if (x == "") {
-      alert("Name must be filled out");
-      return false;
-    }
-  }
-
 function getDOM(){
     name = document.getElementById("name").value;
-    phonenum = document.getElementById("phonenumber").value;
-    numofperson = document.getElementById("numberofperson").value;
-    reservationTime = document.getElementById("dob").value;
-    time = document.getElementById("time").value;
-    couponcode = document.getElementById("couponcode").value;
+    phonenum = document.getElementById("phone").value;
+    numofperson = document.getElementById("numOfPerson").value;
+    reservationDate = new Date(document.getElementById("dateOfReservation").value);
+    time = document.getElementById("reservationTime").value;
+    couponcode = document.getElementById("coupon").value;
 }
 
-let date = new Date(dob).getTime();
-
-if(Date.getTime() < date){
-    document.getElementById("error_message").innerHTML
-    = "<b>Input must be in the correct date</b>"
-    return false;
+function validateToS(){
+    var terms = document.getElementById("terms").getAttribute("checked")
+    console.log(terms)
 }
-
-function validate(){
-    getDOM();
-    if(username = ""){
-        document.getElementById("error_message").innerHTML = "Username must be filled";
-        alert("username can't be empty");
-        return false;
-    }
-    if(numofperson.length > 4){
-        document.getElementById("error_message").innerHTML = "<b> Please contact to our customer service for group of more than 4 people</b>";
-        alert("number of person can't be empty");
-        return false;
-    }
-
-    return false;
-}
-
 
 function validateForm(){
     getDOM()
-    document.getElementById("error_message").innerHTML = "<b> Please contact to our customer service for group of more than 4 people</b>";
-        alert("number of person can't be empty");
+    var errorMssg = document.getElementById("error-message")
+    var terms = document.getElementById("terms").checked
+    errorMssg.innerHTML = ""
+
+    var isValid = true
+    if(name == ""){
+        errorMssg.innerHTML += "name must not be empty</br> </br>"
+        isValid = false
+    }
+
+    if(!terms){
+        errorMssg.innerHTML += "terms of service must be checkd</br> </br>"
+        isValid = false
+    }
+
+    if(phonenum == ""){
+        errorMssg.innerHTML += "phone number must not be empty </br></br>"
+        isValid = false
+    }
+    else if(!isFinite(phonenum)){
+        errorMssg.innerHTML += "phone number must be numeric</br></br>"
+        isValid = false
+    }
+    else if(phonenum < 0){
+        errorMssg.innerHTML += "phone number must not be negative</br></br>"
+        isValid = false
+    }
+
+    var today = new Date()
+
+    time = time.split(":")
+    if(time.length == 1){
+        isValid = false
+        errorMssg.innerHTML += "time must be filled</br></br>"
+    }
+    else if(time[0] < 9 || time[0] > 21){
+        isValid = false
+        errorMssg.innerHTML += "time not valid</br></br>"
+    }
+    if(isNaN(reservationDate)){
+        isValid = false
+        errorMssg.innerHTML += "date must be filled</br></br>"
+    }
+    else if(reservationDate.getDate() < today.getDate() &&
+        reservationDate.getMonth() <= today.getMonth()
+        && reservationDate.getFullYear() <= today.getFullYear()){
+        isValid = false
+        errorMssg.innerHTML += "reservation date must be valid</br></br>"
+    }
+    else if(reservationDate.getDate() == today.getDate() &&
+        reservationDate.getMonth() == today.getMonth()
+        && reservationDate.getFullYear() == today.getFullYear() &&
+        time[0] <= today.getHours() && time[1] <= today.getMinutes()){
+            
+        isValid = false
+        errorMssg.innerHTML += "reservation date must be valid</br></br>"
+    }
+
+    if(numofperson < 0 || numofperson == ""){
+        isValid = false
+        errorMssg.innerHTML += "number of reservation must be positive</br></br>"
+    }
+    var validCoupons = ["EFGTHKJ", "GHFSDE", "DBSWQA"]
+    if(couponcode in validCoupons && couponcode != ""){
+        isValid = false
+        errorMssg.innerHTML += "coupon code is not valid</br>"
+    }
+
+    if(isValid){
+        alert("reservation success")
+        return true
+    }
+
+
     return false
 }
