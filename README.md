@@ -4,8 +4,8 @@ tugas hci:
 
   jobs:
   
-    - blueprint (Home): Viku
-    - logo: Viku
+    - blueprint (Home): Roland
+    - logo: Roland
     - page 5:
       - Home (index): Roland
       - Menu: bawana
